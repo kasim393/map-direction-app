@@ -39,8 +39,9 @@ function App() {
         }`
       );
       var num = response.data.routes[0].distance;
-      (str = num.toString().split(".")), (final = str[0]);
-      len = str[0].length;
+      var str = num.toString().split(".");
+      var final = str[0];
+      var len = str[0].length;
       setData(num.toString().slice(0, -len));
       const data = response.data.routes[0];
       const route = data.geometry.coordinates;
