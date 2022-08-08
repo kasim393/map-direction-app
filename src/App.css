@@ -1,0 +1,117 @@
+.heading {
+  font-family: "Work Sans";
+  font-size: 20px;
+  line-height: 120%;
+  text-align: center;
+  color: #1b31a8;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.map-left {
+  display: flex;
+  flex-direction: column;
+}
+.map-left div {
+  display: flex;
+  align-items: center;
+}
+.map-left .input-box {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+  margin-right: 70px;
+}
+.input-box div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+.input-box div img {
+  position: absolute;
+  bottom: 13px;
+  left: 7px;
+}
+.input-box input {
+  font-family: "Rubik";
+  background: #ffffff;
+  border: 1px solid #e9eef2;
+  border-radius: 4px;
+  padding: 12px 36px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+  color: #4d6475;
+  outline: none;
+  width: 270px;
+}
+.map-left button {
+  background: #1b31a8;
+  border-radius: 32px;
+  border: none;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+  padding: 20px 32px;
+  cursor: pointer;
+}
+
+.map-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 130px;
+}
+.distance {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  border-radius: 8px;
+  border: 1px solid #e9eef2;
+}
+.distance-top {
+  display: flex;
+
+  justify-content: space-between;
+  background-color: white;
+  width: 100%;
+  padding: 10px 20px;
+}
+.distance-top h1 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 120%;
+  text-align: right;
+  color: #0079ff;
+}
+.distance-bottom {
+  padding: 15px 25px;
+}
+.distance-bottom p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  color: #1e2a32;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+/* map */
+.mapboxgl-map {
+  margin-top: 20px;
+  width: 560px;
+  height: 500px;
+}
+.marker {
+  background-color: red;
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
