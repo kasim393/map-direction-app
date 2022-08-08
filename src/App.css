@@ -115,3 +115,12 @@
   border-radius: 50%;
   cursor: pointer;
 }
+
+/* media query */
+
+@media screen and (max-width: 1200px) {
+  .map-wrapper {
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+}

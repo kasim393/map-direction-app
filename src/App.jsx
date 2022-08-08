@@ -7,6 +7,7 @@ function App() {
   const [map, setMap] = useState({});
   const [origin, setOrigin] = useState([]);
   const [destination, setDestination] = useState([]);
+  const [data, setData] = useState([]);
   const SEARCH_API = "https://api.mapbox.com/geocoding/v5/mapbox.places/";
   const DIRECTION_API = "https://api.mapbox.com/directions/v5/mapbox/driving/";
   const search1Ref = useRef("");
@@ -37,6 +38,10 @@ function App() {
           import.meta.env.VITE_TOKEN
         }`
       );
+      var num = response.data.routes[0].distance;
+      (str = num.toString().split(".")), (final = str[0]);
+      len = str[0].length;
+      setData(num.toString().slice(0, -len));
       const data = response.data.routes[0];
       const route = data.geometry.coordinates;
       const geojson = {
@@ -141,10 +146,10 @@ function App() {
           <div className="distance">
             <div className="distance-top">
               <p>Distance</p>
-              <h1>1,427 kms</h1>
+              <h1>{data} kms</h1>
             </div>
             <div className="distance-bottom">
-              <p>The distance between Mumbai and Delhi is 1,427 kms.</p>
+              <p>The distance between Mumbai and Delhi is {data} kms.</p>
             </div>
           </div>
         </div>
